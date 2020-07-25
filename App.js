@@ -190,7 +190,7 @@ const App: () => React$Node = () => {
 
                     </View>
                     <View style={styles.textView}>
-                      <Text ellipsizeMode='tail' numberOfLines={1} style={styles.pickUpText}>Pickup from</Text>
+                      <Text style={styles.pickUpText}>Pickup from</Text>
                       <Text ellipsizeMode='tail' numberOfLines={1} style={styles.addressText}>{`${(pickupAddressLine1 || '')} ${(pickupAddressLine2 || '')} ${(pickupCity || '')} ${(pickupState || '')}`}</Text>
                     </View>
                   </View>
@@ -201,16 +201,18 @@ const App: () => React$Node = () => {
                       </View>
                     </View>
                     <View style={styles.textView}>
-                      <Text ellipsizeMode='tail' numberOfLines={1} style={styles.pickUpText}>Drop to</Text>
+                      <Text style={styles.pickUpText}>Drop to</Text>
                       <Text ellipsizeMode='tail' numberOfLines={1} style={styles.addressText}>{`${(dropAddressLine1 || '')} ${(dropAddressLine2 || '')} ${(dropCity || '')} ${(dropState || '')}`}</Text>
                     </View>
                   </View>
                   <View style={styles.sectionContainer}>
 
-                    <View style={styles.headerCardView}>
-                      <Text ellipsizeMode='tail' numberOfLines={1} style={styles.onWayText}>On Way Pickup</Text>
-                      <View style={styles.packageIdView}><Text ellipsizeMode='tail' numberOfLines={1} style={styles.packageId}>
-                        Package ID</Text><Text ellipsizeMode='tail' numberOfLines={1} style={styles.packageNumber}>245</Text></View>
+                    <View style={styles.profileView}>
+                      <View style={{width: '50%'}}>
+                        <Text style={styles.onWayText}>On Way Pickup</Text>
+                      </View>
+                      <View style={styles.packageIdView}><Text style={styles.packageId}>
+                        Package ID</Text><Text style={styles.packageNumber}>245  </Text></View>
                     </View>
                   </View>
                   <View style={styles.sectionContainer}>
@@ -223,7 +225,7 @@ const App: () => React$Node = () => {
                               'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg',
                           }} rounded={true} />
                       </View>
-                      <View style={styles.nameView}><Text ellipsizeMode='tail' numberOfLines={1} style={styles.name}>
+                      <View style={styles.nameView}><Text style={styles.name}>
                         {riderById[id] ? riderById[id].name : ''}</Text>
                         <Button
                           type="clear"
@@ -238,13 +240,13 @@ const App: () => React$Node = () => {
                   <View style={styles.sectionContainer}>
                     <View style={styles.pickUpStatusContainer}>
                       <View >
-                        <Text ellipsizeMode='tail' numberOfLines={1} style={styles.pickUpStatus}>Pickup by</Text>
-                        <Text ellipsizeMode='tail' numberOfLines={1} style={styles.pickUpTime}>08: 40 PM</Text>
+                        <Text style={styles.pickUpStatus}>Pickup by</Text>
+                        <Text style={styles.pickUpTime}>08: 40 PM</Text>
                       </View>
                       <View style={styles.pickUpOTP}>
-                        <Text ellipsizeMode='tail' numberOfLines={1} style={styles.pickUpStatus}>Pickup OTP</Text>
+                        <Text style={styles.pickUpStatus}>Pickup OTP</Text>
                         <View style={styles.pickUpOTPContainer}>
-                          <Text ellipsizeMode='tail' numberOfLines={1} style={styles.pickUpOTPText}>5485</Text>
+                          <Text style={styles.pickUpOTPText}>5485</Text>
                           <Icon onPress={() => BackHandler.exitApp()} name='log-out' size={15} color="#BA55D3" type="entypo" />
                         </View>
                       </View>

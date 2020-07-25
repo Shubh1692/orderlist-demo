@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     },
     body: {
         backgroundColor: '#FFFFFF',
+        marginBottom: 20
     },
     sectionContainer: {
         display: 'flex',
@@ -63,13 +64,14 @@ export const styles = StyleSheet.create({
     },
     headerCardView: {
         display: "flex",
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        width: '100%',
         borderBottomColor: '#DCDCDC',
         borderBottomWidth: 1,
-        marginBottom: 10
+        marginBottom: 10,
+        flex: 1,
+        width: '100%'
     },
     profileView: {
         paddingBottom: 10,
@@ -94,19 +96,20 @@ export const styles = StyleSheet.create({
     },
     packageId: {
         fontWeight: '200',
-        fontSize: 16,
+        fontSize: 14,
         marginRight: 10,
     },
     packageNumber: {
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: 14,
         marginRight: 10
     },
     packageIdView: {
         display: "flex",
-        alignItems: 'center',
-        justifyContent: 'space-around',
         flexDirection: 'row',
+        justifyContent: 'flex-end',
+        alignItems: 'flex-end',
+        width: '50%'
     },
     nameView: {
         display: "flex",
@@ -130,7 +133,8 @@ export const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'space-between',
         flexDirection: 'row',
-        width: '100%'
+        width: '100%',
+        marginLeft: 10
     },
     pickUpStatus: {
         fontSize: 14
